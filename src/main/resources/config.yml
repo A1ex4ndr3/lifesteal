@@ -1,0 +1,6 @@
+# config.yml
+max-hearts: 20
+commands-malus:
+  - "say le joueurs {player} est mort"
+  - "give {player} diamond 1"
+  - "say vtff et ftggp"

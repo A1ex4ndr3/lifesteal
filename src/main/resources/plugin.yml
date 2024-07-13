@@ -1,0 +1,68 @@
+name: Lifesteal
+author: Alex4ndr3
+version: 1.1
+main: fr.alex4ndr3.lifesteal.Main
+api-version: 1.21
+depend: [PlaceholderAPI, WorldGuard]
+
+commands:
+  ls:
+    description: Commande principale pour Lifesteal
+    usage: /ls <addlife|removelife|resetlife> <player> <amount>
+    aliases: [lifesteal]
+  ls broadcast:
+    description: Commande qui envoie un message a tout les joueurs
+    aliases: ls bc
+    usage: /ls broadcast <message>
+    permission: lifesteal.broadcast
+    permission-message: Vous n'avez pas la permission d'utiliser cette commande.
+
+  ls addlife:
+    description: Ajoute de la vie a la cible
+    usage: /ls addlife <Cible> <Nombre de coeurs>
+    permission: lifesteal.addlife
+    permission-message: Vous n'avez pas la permission d'utiliser cette commande.
+
+  ls removelife:
+    description: Enleve de la vie a la cible
+    aliases: ls rmvlife
+    usage: /ls removelife <Cible> <Nombre de coeurs>
+    permission: lifesteal.removelife
+    permission-message: Vous n'avez pas la permission d'utiliser cette commande.
+
+  ls resetlife:
+    description: Remet la vie a 10 coeurs
+    aliases: ls rslife
+    usage: /ls resetlife <Cible>
+    permission: lifesteal.resetlife
+    permission-message: Vous n'avez pas la permission d'utiliser cette commande.
+
+  ls reload:
+    description: Reload le plugin
+    aliases: ls rl
+    usage: /ls reload
+    permission: lifesteal.reload
+    permission-message: Vous n'avez pas la permission d'utiliser cette commande.
+
+permissions:
+  lifesteal.cleanup:
+    description: Permission pour avoir un heal apres avoir fait un kill.
+    default: false
+  lifesteal.reload:
+    description: Permission pour reload.
+    default: false
+  lifesteal.resetlife:
+    description: Permission pour utiliser la commande /ls resetlife.
+    defaut: false
+  lifesteal.addlife:
+    description: Permission pour utiliser la commande /ls addlife.
+    default: false
+  lifesteal.removelife:
+    description: Permission pour utiliser la commande /ls removelife.
+    default: false
+  lifesteal.broadcast:
+    description: Permission pour utiliser la commande /ls broadcast.
+    default: false
+  lifesteal.nolifechange:
+    description: Permission pour ne pas gagner ou perdre des coeurs dans le lifesteal.
+    default: false
