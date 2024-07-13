@@ -33,7 +33,7 @@ public class Main extends JavaPlugin {
         registerCustomFlags();
     }
 
-
+    //Lancement du plugin
     @Override
     public void onEnable() {
         instance = this;
